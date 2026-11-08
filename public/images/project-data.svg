@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+<title id="title">data</title><desc id="desc">Original geometric artwork used as a replaceable website placeholder.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#dce5eb" stroke-opacity=".22" stroke-width="1"/></pattern></defs>
+<rect width="800" height="500" fill="#172a43"/><rect width="800" height="500" fill="url(#grid)"/><g fill="#f6f8fa"><rect x="95" y="260" width="62" height="150"/><rect x="195" y="170" width="62" height="240"/><rect x="295" y="215" width="62" height="195"/><rect x="395" y="105" width="62" height="305"/></g><path d="M90 325L225 215 325 265 425 140 690 245" fill="none" stroke="#e76832" stroke-width="5"/><text x="70" y="82" font-family="Georgia,serif" font-size="40" fill="#f6f8fa">Data / responsibility</text></svg>

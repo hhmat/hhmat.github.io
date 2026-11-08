@@ -1,0 +1,9 @@
+---
+import { Info } from '@lucide/astro';
+interface Props { file: string; }
+const { file } = Astro.props;
+---
+<aside class="content-note" aria-label="Content editing note">
+  <Info size={18} aria-hidden="true" />
+  <p>This section uses clearly labelled sample content. Replace it in <code>{file}</code> before publishing.</p>
+</aside>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+<title id="title">map</title><desc id="desc">Original geometric artwork used as a replaceable website placeholder.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#dce5eb" stroke-opacity=".22" stroke-width="1"/></pattern></defs>
+<rect width="800" height="500" fill="#dce5eb"/><path d="M90 80L280 45 460 100 700 55V420L480 455 285 405 90 445Z" fill="#f6f8fa" stroke="#172a43" stroke-width="2"/><path d="M280 45L285 405M460 100L480 455M90 245L710 230" stroke="#172a43" stroke-opacity=".35" stroke-width="3"/><path d="M140 350C240 200 335 355 430 210S600 150 650 110" fill="none" stroke="#e76832" stroke-width="6"/><circle cx="430" cy="210" r="14" fill="#172a43"/><text x="70" y="82" font-family="Georgia,serif" font-size="40" fill="#172a43">Place / evidence</text></svg>

@@ -1,0 +1,25 @@
+---
+import { ArrowUpRight } from '@lucide/astro';
+import { formatDate, withBase } from '../utils/content';
+interface Props {
+  post: {
+    slug: string;
+    title: string;
+    excerpt: string;
+    date: string;
+    displayDate: string;
+    category: string;
+    tags: string[];
+    sample: boolean;
+  };
+  filterable?: boolean;
+}
+const { post, filterable = false } = Astro.props;
+---
+<article class="news-card reveal" data-filter-item={filterable ? '' : undefined} data-category={filterable ? post.category : undefined} data-search={filterable ? `${post.title} ${post.excerpt} ${post.tags.join(' ')} ${post.category}`.toLowerCase() : undefined}>
+  <div class="card-meta"><time datetime={post.date}>{post.displayDate || formatDate(post.date)}</time>{post.sample && <span class="sample-badge">Sample article</span>}</div>
+  <p class="eyebrow">{post.category}</p>
+  <h2><a href={withBase(`news/${post.slug}/`)}>{post.title}</a></h2>
+  <p>{post.excerpt}</p>
+  <a class="text-link" href={withBase(`news/${post.slug}/`)}>Read article <ArrowUpRight size={17} aria-hidden="true" /></a>
+</article>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+<title id="title">community</title><desc id="desc">Original geometric artwork used as a replaceable website placeholder.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#dce5eb" stroke-opacity=".22" stroke-width="1"/></pattern></defs>
+<rect width="800" height="500" fill="#f6f8fa"/><rect width="800" height="500" fill="url(#grid)"/><g fill="none" stroke="#172a43" stroke-width="4"><circle cx="300" cy="250" r="130"/><circle cx="500" cy="250" r="130"/></g><path d="M400 132A130 130 0 0 0 400 368A130 130 0 0 0 400 132" fill="#e76832" fill-opacity=".82"/><text x="70" y="82" font-family="Georgia,serif" font-size="40" fill="#172a43">Community / exchange</text></svg>

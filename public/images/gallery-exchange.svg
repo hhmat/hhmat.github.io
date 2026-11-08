@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+<title id="title">exchange</title><desc id="desc">Original geometric artwork used as a replaceable website placeholder.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#dce5eb" stroke-opacity=".22" stroke-width="1"/></pattern></defs>
+<rect width="800" height="600" fill="#f6f8fa"/><path d="M60 140C260 140 240 460 400 300S540 140 740 140M60 460C260 460 240 140 400 300S540 460 740 460" fill="none" stroke="#172a43" stroke-width="5"/><circle cx="400" cy="300" r="30" fill="#e76832"/></svg>

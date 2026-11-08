@@ -1,0 +1,15 @@
+---
+import { ArrowLeft, Search } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../utils/content';
+---
+<BaseLayout title="Page not found" description="The requested page could not be found." noindex>
+  <section class="section">
+    <div class="narrow flow">
+      <p class="eyebrow">404 · Page not found</p>
+      <h1>This page is outside the portfolio.</h1>
+      <p class="muted">The address may have changed, or the page may no longer exist. Return home or search the site’s projects, publications, and articles.</p>
+      <div class="button-row"><a class="button" href={withBase()}><ArrowLeft size={17} aria-hidden="true" /> Return home</a><button class="button button-secondary" type="button" data-search-open><Search size={17} aria-hidden="true" /> Search website</button></div>
+    </div>
+  </section>
+</BaseLayout>

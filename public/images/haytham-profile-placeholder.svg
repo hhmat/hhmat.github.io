@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+<title id="title">Haytham Hussein editorial portrait placeholder</title><desc id="desc">Original geometric artwork used as a replaceable website placeholder.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#dce5eb" stroke-opacity=".22" stroke-width="1"/></pattern></defs>
+
+<rect width="800" height="1000" fill="#172a43"/><rect width="800" height="1000" fill="url(#grid)"/>
+<circle cx="610" cy="205" r="230" fill="none" stroke="#e76832" stroke-width="2"/><circle cx="610" cy="205" r="176" fill="#274665"/>
+<path d="M0 750L800 460V1000H0Z" fill="#f6f8fa"/><path d="M0 750L800 460" stroke="#e76832" stroke-width="3"/>
+<text x="72" y="160" fill="#f6f8fa" font-family="Arial,sans-serif" font-size="22" letter-spacing="5">HAYTHAM HUSSEIN</text>
+<text x="58" y="635" fill="#f6f8fa" font-family="Georgia,serif" font-size="280" letter-spacing="-24">HH</text>
+<text x="72" y="846" fill="#172a43" font-family="Georgia,serif" font-size="52">Research · Data · Impact</text>
+<text x="72" y="908" fill="#607387" font-family="Arial,sans-serif" font-size="20" letter-spacing="3">PROFESSIONAL PORTRAIT PLACEHOLDER</text>
+</svg>

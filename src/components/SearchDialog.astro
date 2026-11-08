@@ -1,0 +1,104 @@
+---
+import { Search, X } from '@lucide/astro';
+---
+<dialog class="search-dialog" id="site-search" aria-labelledby="search-title">
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header">
+      <h2 id="search-title">Search this website</h2>
+      <button class="icon-button" id="search-close" type="button" aria-label="Close search"><X size={20} aria-hidden="true" /></button>
+    </div>
+    <div class="search-field">
+      <Search size={19} aria-hidden="true" />
+      <input id="site-search-input" type="search" placeholder="Search projects, publications, news…" autocomplete="off" aria-controls="site-search-results" aria-describedby="search-status" />
+    </div>
+    <p class="small muted" id="search-status" role="status" aria-live="polite">Type to search, or browse the suggestions.</p>
+    <div class="search-results" id="site-search-results"></div>
+  </div>
+</dialog>
+
+<script>
+  type SearchItem = { title: string; description: string; category: string; url: string };
+  const dialog = document.querySelector<HTMLDialogElement>('#site-search');
+  const input = document.querySelector<HTMLInputElement>('#site-search-input');
+  const results = document.querySelector<HTMLDivElement>('#site-search-results');
+  const status = document.querySelector<HTMLParagraphElement>('#search-status');
+  const close = document.querySelector<HTMLButtonElement>('#search-close');
+  let items: SearchItem[] = [];
+  let loaded = false;
+
+  const normalise = (value: string) => value.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+  const render = () => {
+    if (!results || !input || !status) return;
+    const query = normalise(input.value.trim());
+    const terms = query.split(/\s+/).filter(Boolean);
+    const matches = items.filter((item) => {
+      const haystack = normalise(`${item.title} ${item.description} ${item.category}`);
+      return terms.every((term) => haystack.includes(term));
+    }).slice(0, 10);
+    results.replaceChildren();
+    status.textContent = query ? `${matches.length} result${matches.length === 1 ? '' : 's'} for “${input.value.trim()}”` : 'Suggested destinations';
+    if (matches.length === 0) {
+      const empty = document.createElement('p');
+      empty.className = 'search-empty';
+      empty.textContent = 'No matching content. Try a broader term or browse the main navigation.';
+      results.append(empty);
+      return;
+    }
+    matches.forEach((item) => {
+      const link = document.createElement('a');
+      link.className = 'search-result';
+      link.href = item.url;
+      const category = document.createElement('span');
+      category.className = 'search-result-category';
+      category.textContent = item.category;
+      const title = document.createElement('span');
+      title.className = 'search-result-title';
+      title.textContent = item.title;
+      const description = document.createElement('span');
+      description.className = 'search-result-description';
+      description.textContent = item.description;
+      link.append(category, title, description);
+      link.addEventListener('click', () => dialog?.close());
+      results.append(link);
+    });
+  };
+
+  const loadIndex = async () => {
+    if (loaded || !status) return;
+    try {
+      const base = document.documentElement.dataset.base || '/';
+      const response = await fetch(`${base.replace(/\/$/, '')}/search-index.json`);
+      if (!response.ok) throw new Error('Search index unavailable');
+      items = await response.json();
+      loaded = true;
+      render();
+    } catch {
+      status.textContent = 'Search could not load. Please use the main navigation instead.';
+    }
+  };
+
+  const openSearch = () => {
+    if (!dialog || dialog.open) return;
+    dialog.showModal();
+    input?.focus();
+    void loadIndex();
+  };
+
+  document.querySelectorAll('[data-search-open]').forEach((button) => button.addEventListener('click', openSearch));
+  close?.addEventListener('click', () => dialog?.close());
+  dialog?.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+  dialog?.addEventListener('close', () => document.querySelector<HTMLButtonElement>('[data-search-open]')?.focus());
+  input?.addEventListener('input', render);
+  document.addEventListener('keydown', (event) => {
+    const target = event.target as HTMLElement;
+    const typing = target.matches('input, textarea, select, [contenteditable="true"]');
+    if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+      event.preventDefault();
+      openSearch();
+    } else if (event.key === '/' && !typing && !dialog?.open) {
+      event.preventDefault();
+      openSearch();
+    }
+  });
+</script>

@@ -1,0 +1,82 @@
+[
+  {
+    "role": "AXA Research Fellow",
+    "organisation": "University of Nottingham, Department of Chemistry",
+    "location": "Nottingham, United Kingdom",
+    "period": "Sep 2024 – Present",
+    "summary": "Leads an independent research programme on conductive diamond electrochemical cells for critical and rare earth element recovery, using green solvents and bioelectrochemistry to advance the circular economy. Supervises researchers, teaches physical chemistry, manages the AXA grant, and leads laboratory health and safety for the battery and recycling section.",
+    "sample": false
+  },
+  {
+    "role": "Research Fellow",
+    "organisation": "University of Aberdeen, Department of Chemistry & School of Engineering",
+    "location": "Aberdeen, United Kingdom",
+    "period": "Oct 2022 – Sep 2024",
+    "summary": "Led a research portfolio on efficient electrochemical CO₂ reduction using non-thermal plasma as an electrolyte.",
+    "sample": false
+  },
+  {
+    "role": "Research Officer",
+    "organisation": "Swansea University, College of Engineering",
+    "location": "Swansea, United Kingdom",
+    "period": "Jun 2021 – Oct 2022",
+    "summary": "Led the scale-up of sodium battery technology and collaborated with SPTS/KLA and Enserv on nanometric dielectric protection layers designed to suppress sodium dendrite formation.",
+    "sample": false
+  },
+  {
+    "role": "Research Fellow",
+    "organisation": "University of Southampton, Department of Chemistry",
+    "location": "Southampton, United Kingdom",
+    "period": "Aug 2019 – Jun 2021",
+    "summary": "Pioneered the synthesis of HgCdTe, Bi₂Te₃, and ZnTe semiconductor materials for electronic devices and infrared detectors through government-funded research supported by a £6 million EPSRC grant.",
+    "sample": false
+  },
+  {
+    "role": "Postdoctoral Research Fellow",
+    "organisation": "University of Warwick, Department of Chemistry",
+    "location": "Coventry, United Kingdom",
+    "period": "Jan 2019 – Aug 2020",
+    "summary": "Fabricated the first electron-beam-transparent boron-doped diamond electrodes for in situ TEM, developed a bottom-up electrochemical route to V₂O₅ nanobelts, and created single-atom, cluster, and nanoparticle catalysts for hydrogen fuel cells.",
+    "sample": false
+  },
+  {
+    "role": "Project and Technology Development Senior Leader",
+    "organisation": "Procter & Gamble (P&G)",
+    "location": "Saudi Arabia",
+    "period": "Jun 2011 – Sep 2013",
+    "summary": "Led major Fairy and Ariel brand initiatives through process engineering and risk management, partnered with global R&D and regional engineering teams, and received Gold and Silver Awards for operational excellence and cost reduction.",
+    "sample": false
+  },
+  {
+    "role": "Consultancy and Implementation Leader: Quality Assurance",
+    "organisation": "Procter & Gamble (P&G)",
+    "location": "Saudi Arabia",
+    "period": "Jun 2009 – Jun 2011",
+    "summary": "Managed quality-control systems for synthetic granules using Lean Six Sigma and ISO auditing practices, reducing product defects by 70% and achieving zero quality incidents.",
+    "sample": false
+  },
+  {
+    "role": "R&D and Quality Control Chemical Engineer",
+    "organisation": "Chemanol Petrochemicals",
+    "location": "Saudi Arabia",
+    "period": "Jul 2008 – May 2009",
+    "summary": "Performed quantitative and qualitative analysis of starting and intermediate materials for large-scale methanol and derivatives manufacturing.",
+    "sample": false
+  },
+  {
+    "role": "Chemist",
+    "organisation": "Alnagda Pharmacy",
+    "location": "Egypt",
+    "period": "Jul 2006 – May 2008",
+    "summary": "Worked in professional chemical practice within a pharmacy setting.",
+    "sample": false
+  },
+  {
+    "role": "Founder and Entrepreneur",
+    "organisation": "FlowerFragrance",
+    "location": "Egypt",
+    "period": "Apr 2006 – Jun 2008",
+    "summary": "Established a small fragrance business using locally grown flowers and promoted rooftop flower planting as a community-oriented approach to sustainability and enterprise.",
+    "sample": false
+  }
+]

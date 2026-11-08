@@ -1,0 +1,30 @@
+---
+import { ArrowUpRight } from '@lucide/astro';
+import { withBase } from '../utils/content';
+interface Props {
+  project: {
+    slug: string;
+    title: string;
+    category: string;
+    year?: string;
+    summary: string;
+    image: string;
+    technologies: string[];
+    sample: boolean;
+  };
+  filterable?: boolean;
+}
+const { project, filterable = false } = Astro.props;
+---
+<article class="project-card reveal" id={filterable ? project.slug : undefined} data-filter-item={filterable ? '' : undefined} data-category={filterable ? project.category : undefined} data-search={filterable ? `${project.title} ${project.summary} ${project.technologies.join(' ')} ${project.category}`.toLowerCase() : undefined}>
+  <a class="project-image-link" href={withBase(`projects/${project.slug}/`)} aria-label={`View ${project.title} project brief`}>
+    <img class="project-image" src={withBase(project.image)} alt="" width="800" height="500" loading="lazy" />
+  </a>
+  <div class="project-card-body">
+    <div class="card-meta"><span>{project.category}{project.year ? ` · ${project.year}` : ''}</span>{project.sample && <span class="sample-badge">Sample</span>}</div>
+    <h3><a href={withBase(`projects/${project.slug}/`)}>{project.title}</a></h3>
+    <p>{project.summary}</p>
+    <ul class="tag-list" aria-label="Methods and technologies">{project.technologies.map((technology) => <li class="tag">{technology}</li>)}</ul>
+    <a class="text-link" href={withBase(`projects/${project.slug}/`)}>View project brief <ArrowUpRight size={17} aria-hidden="true" /></a>
+  </div>
+</article>

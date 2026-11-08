@@ -1,0 +1,14 @@
+[
+  {
+    "category": "Electrochemistry & materials",
+    "skills": ["Electrodeposition", "Boron-doped diamond", "Battery and recycling technologies", "CO₂ conversion", "Electrochemical impedance spectroscopy", "OLEMS", "Green solvents and ionic liquids", "Bioelectrochemistry"]
+  },
+  {
+    "category": "Microscopy & analysis",
+    "skills": ["STEM and identical-location STEM", "Cryo-EM, SEM, and FIB-SEM", "Atomic force microscopy", "XEDS, XPS, and EELS", "Raman and in situ infrared spectroscopy", "X-ray diffraction", "Nuclear magnetic resonance"]
+  },
+  {
+    "category": "Data, design & leadership",
+    "skills": ["Python, MATLAB, and OriginLab", "COMSOL Multiphysics", "SolidWorks, AutoCAD, and Fusion 360", "Blender and ImageJ", "Research programme and grant leadership", "Postgraduate supervision and teaching", "Laboratory health and safety", "Equality, diversity, and inclusion"]
+  }
+]

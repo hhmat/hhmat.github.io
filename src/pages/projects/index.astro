@@ -1,0 +1,27 @@
+---
+import { Search } from '@lucide/astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import projects from '../../data/projects.json';
+import { unique } from '../../utils/content';
+const categories = unique(projects.map((project) => project.category));
+---
+<BaseLayout title="Projects" description="Explore Haytham Hussein’s research projects in electrochemistry, energy storage, sustainable materials, data science, and public engagement.">
+  <PageHero eyebrow="Projects" title="Work that connects questions to outcomes." intro="Filter by discipline or search by title, method, and technology. Each project has a concise, structured case-study page." breadcrumb="Projects" />
+  <section class="section" data-filter-root>
+    <div class="container">
+      <div class="filter-panel" aria-label="Project filters">
+        <div class="search-field"><Search size={19} aria-hidden="true" /><input type="search" data-filter-search placeholder="Search projects…" aria-label="Search projects" /></div>
+        <div class="filter-group" aria-label="Filter projects by category">
+          <button class="filter-button" type="button" data-filter="All" aria-pressed="true">All work</button>
+          {categories.map((category) => <button class="filter-button" type="button" data-filter={category} aria-pressed="false">{category}</button>)}
+        </div>
+      </div>
+      <p class="result-count" data-result-count role="status" aria-live="polite"></p>
+      <div class="project-grid">{projects.map((project) => <ProjectCard project={project} filterable />)}</div>
+      <div class="empty-state filter-empty" data-filter-empty><h3>No matching projects</h3><p>Try another keyword or select “All work” to reset the category filter.</p></div>
+    </div>
+  </section>
+</BaseLayout>
+<script>import { initFilters } from '../../scripts/filters'; initFilters();</script>

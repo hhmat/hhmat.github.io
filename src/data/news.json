@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "electrochemical-co2-plasmas-publication",
+    "title": "Electrochemical conversion of CO₂ plasmas published",
+    "excerpt": "The Sustainable Energy & Fuels article and an associated Zenodo dataset document research into plasma-based electrochemical carbon dioxide conversion.",
+    "date": "2026-01-01",
+    "displayDate": "2026",
+    "category": "Publications",
+    "tags": ["CO₂ conversion", "Plasma", "Electrochemistry"],
+    "featured": true,
+    "sample": false,
+    "body": [
+      "The article ‘Electrochemical conversion of CO₂ plasmas’ has been published in Sustainable Energy & Fuels, volume 10, issue 9, pages 2327–2343, with an associated dataset available through Zenodo.",
+      "The research investigates electrochemical carbon dioxide conversion using non-thermal plasma. It grew from a research portfolio led at the University of Aberdeen that connected electrochemistry, plasma engineering, and inorganic chemistry.",
+      "The work was also presented orally at the 248th ECS Meeting in Chicago in October 2025. Full publication details are available in the publications section."
+    ]
+  },
+  {
+    "slug": "ecs-chicago-co2-plasmas",
+    "title": "CO₂ plasma research presented at the 248th ECS Meeting",
+    "excerpt": "An oral presentation in Chicago brought the electrochemical CO₂ plasma research to the international electrochemistry community.",
+    "date": "2025-10-01",
+    "displayDate": "October 2025",
+    "category": "Conferences",
+    "tags": ["ECS", "CO₂ conversion", "Oral presentation"],
+    "featured": false,
+    "sample": false,
+    "body": [
+      "Electrochemical Conversion of CO₂ Plasmas was presented orally at the 248th ECS Meeting in Chicago, United States, in October 2025.",
+      "The presentation formed part of a wider research programme on efficient electrochemical carbon dioxide reduction using non-thermal plasma as an electrolyte.",
+      "The subsequent journal article and associated dataset are now included in the publication record."
+    ]
+  },
+  {
+    "slug": "axa-research-fellowship-nottingham",
+    "title": "Independent AXA Research Fellowship at Nottingham",
+    "excerpt": "A €140,000 AXA Research Fund fellowship supports sustainable recovery of critical and rare earth elements from batteries and electronic waste.",
+    "date": "2024-09-01",
+    "displayDate": "September 2024",
+    "category": "Research funding",
+    "tags": ["AXA", "Circular economy", "Critical elements"],
+    "featured": false,
+    "sample": false,
+    "body": [
+      "Haytham Hussein joined the Department of Chemistry at the University of Nottingham as an AXA Research Fellow and principal investigator in September 2024.",
+      "The €140,000 AXA Postdoctoral Research Fellowship supports an independent programme on conductive diamond electrochemical cells for the recovery of critical and rare earth elements from batteries and electronic waste.",
+      "The programme uses green solvents and bioelectrochemistry to promote circular-economy and sustainable-manufacturing technologies, alongside postgraduate supervision, teaching, and laboratory safety leadership."
+    ]
+  },
+  {
+    "slug": "invited-ecs-vancouver-electrodeposition",
+    "title": "Invited electrodeposition presentation at ECS Vancouver",
+    "excerpt": "The 241st ECS Meeting featured an invited presentation on tracking metal electrodeposition from a single atom to a crystalline nanoparticle.",
+    "date": "2022-06-01",
+    "displayDate": "June 2022",
+    "category": "Conferences",
+    "tags": ["Electrodeposition", "Electron microscopy", "Invited talk"],
+    "featured": false,
+    "sample": false,
+    "body": [
+      "An invited presentation at the 241st ECS Meeting in Vancouver, Canada, in June 2022 focused on tracking metal electrodeposition dynamics from nucleation and growth of a single atom to a crystalline nanoparticle.",
+      "The associated research combines electrochemistry with advanced microscopy to investigate the earliest stages of metal nucleation and subsequent nanoparticle growth.",
+      "The underlying article was published in ACS Nano in 2018 and is included in the publications archive."
+    ]
+  },
+  {
+    "slug": "royal-society-diamond-outreach",
+    "title": "Diamond materials science at the Royal Society Summer Exhibition",
+    "excerpt": "‘Diamond: more than just a gemstone’ introduced advanced materials science to visitors at a major public exhibition in London.",
+    "date": "2016-07-01",
+    "displayDate": "July 2016",
+    "category": "Public engagement",
+    "tags": ["Outreach", "Diamond", "Science communication"],
+    "featured": false,
+    "sample": false,
+    "body": [
+      "Haytham presented ‘Diamond: more than just a gemstone’ at the Royal Society Summer Exhibition in London in July 2016.",
+      "The exhibition provided a public setting for discussing the scientific and technological importance of diamond beyond its familiar use as a gemstone.",
+      "The exhibition attracted more than 10,000 visitors. This forms part of a broader public-engagement record that also includes the Science Museum’s ‘Science Late’ event in April 2015."
+    ]
+  }
+]

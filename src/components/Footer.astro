@@ -1,0 +1,42 @@
+---
+import { ArrowUpRight } from '@lucide/astro';
+import profile from '../data/profile.json';
+import { withBase } from '../utils/content';
+
+const year = new Date().getFullYear();
+const socialLinks = [
+  { label: 'LinkedIn', url: profile.links.linkedin },
+  { label: 'GitHub', url: profile.links.github },
+  { label: 'Google Scholar', url: profile.links.scholar },
+  { label: 'ORCID', url: profile.links.orcid },
+  { label: 'ResearchGate', url: profile.links.researchgate },
+].filter((item) => item.url);
+---
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <h2>{profile.name}</h2>
+      <p>{profile.role} based in {profile.location}.<br />{profile.tagline}</p>
+      {socialLinks.length > 0 && (
+        <div class="button-row">
+          {socialLinks.map((item) => <a class="text-link" href={item.url} target="_blank" rel="noopener noreferrer">{item.label}<ArrowUpRight size={16} aria-hidden="true" /></a>)}
+        </div>
+      )}
+    </div>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-nav">
+        <li><a href={withBase('about/')}>About</a></li>
+        <li><a href={withBase('projects/')}>Projects</a></li>
+        <li><a href={withBase('publications/')}>Publications</a></li>
+        <li><a href={withBase('news/')}>News & notes</a></li>
+        <li><a href={withBase('gallery/')}>Gallery</a></li>
+        <li><a href={withBase('contact/')}>Contact</a></li>
+        <li><a href={withBase('sitemap-index.xml')}>Sitemap</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {year} {profile.name}. Built for an open, accessible web.</p>
+    <p>Nottingham, United Kingdom</p>
+  </div>
+</footer>

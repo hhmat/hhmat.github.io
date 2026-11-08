@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+<title id="title">showcase</title><desc id="desc">Original geometric artwork used as a replaceable website placeholder.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#dce5eb" stroke-opacity=".22" stroke-width="1"/></pattern></defs>
+<rect width="800" height="600" fill="#dce5eb"/><rect x="90" y="100" width="280" height="400" fill="#172a43"/><rect x="410" y="100" width="300" height="180" fill="#f6f8fa"/><rect x="410" y="320" width="300" height="180" fill="#e76832"/><path d="M130 160H330M130 205H330M130 250H270" stroke="#f6f8fa" stroke-width="5"/></svg>

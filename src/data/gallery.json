@@ -1,0 +1,74 @@
+[
+  {
+    "id": "professional-gatherings",
+    "title": "Professional gatherings",
+    "category": "Events",
+    "image": "/images/gallery-professional-gathering.webp",
+    "alt": "A large professional gathering in an ornate ballroom",
+    "caption": "A large professional gathering—an opportunity for discussion, connection, and exchange.",
+    "sample": false
+  },
+  {
+    "id": "2d-materials-semiconductors",
+    "title": "2D materials and semiconductors",
+    "category": "Research Activities",
+    "image": "/images/gallery-2d-semiconductors.webp",
+    "alt": "Colour-enhanced microscopy image showing the textured surface of a 2D semiconductor material",
+    "caption": "Microscopy revealing the surface structure of 2D materials and semiconductors.",
+    "sample": false
+  },
+  {
+    "id": "functional-materials-synthesis",
+    "title": "Functional materials synthesis",
+    "category": "Research Activities",
+    "image": "/images/gallery-functional-materials-synthesis.webp",
+    "alt": "Colour-enhanced microscopy image of faceted functional material crystals",
+    "caption": "Faceted crystals illustrating the synthesis of functional materials.",
+    "sample": false
+  },
+  {
+    "id": "plasma-electrochemistry",
+    "title": "Plasma electrochemistry",
+    "category": "Research Activities",
+    "image": "/images/gallery-plasma-electrochemistry.webp",
+    "alt": "Blue-violet plasma glowing inside an experimental electrochemical cell",
+    "caption": "A plasma-based electrochemical experiment in progress.",
+    "sample": false
+  },
+  {
+    "id": "electrochemical-cell-development",
+    "title": "Electrochemical cell development",
+    "category": "Research Activities",
+    "image": "/images/gallery-electrochemical-cell.webp",
+    "alt": "Laboratory electrochemical cell connected to tubing, bottles, and wiring",
+    "caption": "A laboratory electrochemical cell with associated tubing and experimental apparatus.",
+    "sample": false
+  },
+  {
+    "id": "nanoscale-materials-characterisation",
+    "title": "Nanoscale materials characterisation",
+    "category": "Research Activities",
+    "image": "/images/gallery-haadf-microscopy.webp",
+    "alt": "High-angle annular dark-field electron micrograph showing nanoscale material structure",
+    "caption": "High-angle annular dark-field electron microscopy revealing nanoscale material structure.",
+    "sample": false
+  },
+  {
+    "id": "experimental-research-facilities",
+    "title": "Experimental research facilities",
+    "category": "Research Activities",
+    "image": "/images/gallery-research-facility.webp",
+    "alt": "Researcher beside a large instrument in a laboratory facility",
+    "caption": "A research facility housing specialised instrumentation for experimental investigation.",
+    "sample": false
+  },
+  {
+    "id": "mineral-materials-education",
+    "title": "Mineral and materials education",
+    "category": "Community Engagement",
+    "image": "/images/gallery-mineral-education.webp",
+    "alt": "Display of colourful mineral specimens with identifying labels",
+    "caption": "Mineral specimens illustrating the diversity and composition of natural materials.",
+    "sample": false
+  }
+]

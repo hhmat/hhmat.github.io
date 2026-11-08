@@ -1,0 +1,36 @@
+---
+import { ArrowUpRight, Search } from '@lucide/astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import news from '../../data/news.json';
+import { formatDate, unique, withBase } from '../../utils/content';
+const featured = news.find((post) => post.featured) || news[0];
+const categories = unique(news.map((post) => post.category));
+---
+<BaseLayout title="News & notes" description="Research updates, publications, conference presentations, fellowships, and public engagement from Haytham Hussein.">
+  <PageHero eyebrow="News & notes" title="Research in progress, shared clearly." intro="Updates on publications, scientific meetings, research funding, invited talks, and materials-science outreach." breadcrumb="News & notes" />
+  <section class="section">
+    <div class="container news-feature">
+      <div class="news-feature-art reveal"><img src={withBase('images/news-feature.svg')} alt="" width="800" height="600" /></div>
+      <div class="news-feature-copy reveal">
+        <p class="eyebrow">Featured article · {featured.displayDate || formatDate(featured.date)}</p>
+        <h2>{featured.title}</h2><p>{featured.excerpt}</p>
+        <a class="text-link" href={withBase(`news/${featured.slug}/`)}>Read featured article <ArrowUpRight size={17} aria-hidden="true" /></a>
+      </div>
+    </div>
+    <div class="container" data-filter-root>
+      <div class="filter-panel" aria-label="Article filters">
+        <div class="search-field"><Search size={19} aria-hidden="true" /><input type="search" data-filter-search placeholder="Search articles and tags…" aria-label="Search articles" /></div>
+        <div class="filter-group" aria-label="Filter articles by category">
+          <button class="filter-button" type="button" data-filter="All" aria-pressed="true">All notes</button>
+          {categories.map((category) => <button class="filter-button" type="button" data-filter={category} aria-pressed="false">{category}</button>)}
+        </div>
+      </div>
+      <p class="result-count" data-result-count role="status" aria-live="polite"></p>
+      <div class="news-grid">{news.map((post) => <NewsCard post={post} filterable />)}</div>
+      <div class="empty-state filter-empty" data-filter-empty><h3>No matching articles</h3><p>Try another keyword or select “All notes” to reset the category filter.</p></div>
+    </div>
+  </section>
+</BaseLayout>
+<script>import { initFilters } from '../../scripts/filters'; initFilters();</script>

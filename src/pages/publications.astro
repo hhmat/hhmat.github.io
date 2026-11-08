@@ -1,0 +1,67 @@
+---
+import { ArrowUpRight, Copy, ExternalLink, Search } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import publications from '../data/publications.json';
+import profile from '../data/profile.json';
+import { unique } from '../utils/content';
+const types = unique(publications.map((publication) => publication.type));
+---
+<BaseLayout title="Publications" description="Journal articles, datasets, preprints, conference papers, and doctoral research by Haytham Hussein in electrochemistry and materials science.">
+  <PageHero eyebrow="Publications" title="Research, documented with care." intro="A structured, searchable publication record with consistent citations and space for open-access links." breadcrumb="Publications">
+    <a class="button button-secondary" href={profile.links.scholar} target="_blank" rel="noopener noreferrer">View Google Scholar <ArrowUpRight size={17} aria-hidden="true" /></a>
+  </PageHero>
+  <section class="section" data-filter-root>
+    <div class="container">
+      <div class="filter-panel" aria-label="Publication filters">
+        <div class="search-field"><Search size={19} aria-hidden="true" /><input type="search" data-filter-search placeholder="Search title, author, venue…" aria-label="Search publications" /></div>
+        <div class="filter-group" aria-label="Filter publications by type">
+          <button class="filter-button" type="button" data-filter="All" aria-pressed="true">All publications</button>
+          {types.map((type) => <button class="filter-button" type="button" data-filter={type} aria-pressed="false">{type}</button>)}
+        </div>
+      </div>
+      <p class="result-count" data-result-count role="status" aria-live="polite"></p>
+      <div class="publication-list">
+        {publications.map((publication) => (
+          <article class="publication-item reveal" id={publication.slug} data-filter-item data-category={publication.type} data-search={`${publication.title} ${publication.authors} ${publication.venue} ${publication.type} ${publication.year}`.toLowerCase()}>
+            <div class="publication-top"><span>{publication.type}</span><span aria-hidden="true">·</span><span>{publication.year}</span>{publication.sample && <span class="sample-badge">Sample citation</span>}</div>
+            <h2>{publication.title}</h2>
+            <p class="publication-authors">{publication.authors}</p>
+            <p class="publication-venue">{publication.venue}</p>
+            <p class="publication-summary">{publication.summary}</p>
+            <div class="citation"><span class="small sans"><strong>APA-style citation</strong><br /></span>{publication.citation}</div>
+            <div class="publication-actions">
+              <button class="button button-secondary" type="button" data-copy-citation data-citation={publication.citation}><Copy size={17} aria-hidden="true" /> Copy citation</button>
+              {publication.url && <a class="button button-secondary" href={publication.url} target="_blank" rel="noopener noreferrer">Read publication <ExternalLink size={17} aria-hidden="true" /></a>}
+              <span class="copy-status" role="status" aria-live="polite"></span>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="empty-state filter-empty" data-filter-empty><h3>No matching publications</h3><p>Try another keyword or select “All publications” to reset the type filter.</p></div>
+    </div>
+  </section>
+</BaseLayout>
+<script>
+  import { initFilters } from '../scripts/filters';
+  initFilters();
+  document.querySelectorAll<HTMLButtonElement>('[data-copy-citation]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const citation = button.dataset.citation || '';
+      const status = button.parentElement?.querySelector<HTMLElement>('.copy-status');
+      try {
+        await navigator.clipboard.writeText(citation);
+        if (status) status.textContent = 'Citation copied.';
+      } catch {
+        const textarea = document.createElement('textarea');
+        textarea.value = citation;
+        document.body.append(textarea);
+        textarea.select();
+        const copied = document.execCommand('copy');
+        textarea.remove();
+        if (status) status.textContent = copied ? 'Citation copied.' : 'Select the citation above to copy it manually.';
+      }
+      window.setTimeout(() => { if (status) status.textContent = ''; }, 3500);
+    });
+  });
+</script>

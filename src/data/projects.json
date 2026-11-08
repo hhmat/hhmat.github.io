@@ -1,0 +1,149 @@
+[
+  {
+    "slug": "critical-element-recovery",
+    "title": "Critical & Rare Earth Element Recovery",
+    "category": "Research",
+    "year": "2024 – Present",
+    "summary": "An independent AXA-funded programme developing conductive diamond electrochemical cells to recover valuable elements from batteries and electronic waste.",
+    "image": "/images/project-critical-elements.webp",
+    "technologies": ["Conductive diamond", "Deep eutectic solvents", "Ionic liquids", "Bioelectrochemistry"],
+    "featured": true,
+    "sample": false,
+    "overview": "Batteries and electronic waste contain critical and rare earth elements whose recovery is central to resilient supply chains and a circular economy. This AXA Research Fellowship supports an independent programme at the University of Nottingham focused on new electrochemical recovery pathways.",
+    "approach": "The programme combines engineered conductive diamond electrochemical cells with green solvents, including deep eutectic solvents and ionic liquids, and bioelectrochemistry. It integrates materials characterisation, electrochemical measurement, and collaboration with industrial partners.",
+    "outcome": "The work is establishing a sustainable manufacturing and recycling research direction while supporting postgraduate supervision, physical chemistry teaching, laboratory safety leadership, and the development of automated, high-throughput electrochemical methods."
+  },
+  {
+    "slug": "electrochemical-co2-plasmas",
+    "title": "Electrochemical Conversion of CO₂ Plasmas",
+    "category": "Research",
+    "year": "2022 – 2026",
+    "summary": "Research into efficient electrochemical CO₂ reduction using non-thermal plasma as an electrolyte, developed at the University of Aberdeen.",
+    "image": "/images/project-co2-plasmas.webp",
+    "technologies": ["CO₂ reduction", "Non-thermal plasma", "Electrochemistry", "Materials analysis"],
+    "featured": true,
+    "sample": false,
+    "overview": "Reducing carbon dioxide electrochemically offers a route to converting a greenhouse gas into useful chemical products. This research portfolio investigated how non-thermal plasma could be used as an electrolyte in that conversion process.",
+    "approach": "The work connected electrochemistry, plasma engineering, and inorganic chemistry at the University of Aberdeen. Cross-disciplinary collaboration supported the investigation of plasma-based conversion and related materials synthesis.",
+    "outcome": "The research led to the 2026 Sustainable Energy & Fuels article ‘Electrochemical conversion of CO₂ plasmas’, an associated Zenodo dataset, and an oral presentation at the 248th ECS Meeting in Chicago in October 2025."
+  },
+  {
+    "slug": "fuel-cells-electrolysers-hydrogen",
+    "title": "Fuel Cells, Electrolysers, Stacks & Hydrogen",
+    "category": "Research",
+    "summary": "Example research spanning fuel-cell and electrolyser experimentation, stack hardware, hydrogen evolution, and platinum electrocatalysts for energy conversion.",
+    "image": "/images/project-fuel-cell-hydrogen.webp",
+    "technologies": ["Fuel cells", "Electrolysers", "Stack hardware", "Hydrogen evolution", "Platinum electrocatalysts"],
+    "featured": false,
+    "sample": false,
+    "overview": "Fuel cells and electrolysers connect electrochemical materials with low-carbon energy conversion. This project brings together example work on laboratory cell and stack assemblies, hydrogen evolution, methanol oxidation, and platinum-based electrocatalysts.",
+    "approach": "The work combines laboratory cell and stack hardware, associated tubing, electrochemical measurements, and catalyst materials design. The related studies investigate platinum single atoms, clusters, and nanoparticles for hydrogen evolution, and laser pulse heating for the electrochemical synthesis of nanoporous platinum nanoparticles for methanol oxidation.",
+    "outcome": "The linked publications demonstrate platinum catalyst design across length scales—from single atoms and clusters to nanoporous nanoparticles—for hydrogen evolution and fuel-cell-relevant methanol oxidation.",
+    "links": [
+      {
+        "label": "Ultrahigh Mass Activity Pt Entities Consisting of Pt Single Atoms, Clusters, and Nanoparticles for Improved Hydrogen Evolution Reaction",
+        "url": "https://doi.org/10.1002/smll.202205885"
+      },
+      {
+        "label": "Electrochemical Synthesis of Nanoporous Platinum Nanoparticles Using Laser Pulse Heating: Application to Methanol Oxidation",
+        "url": "https://doi.org/10.1021/acscatal.7b02701"
+      }
+    ]
+  },
+  {
+    "slug": "electron-transparent-diamond",
+    "title": "Electron-Beam-Transparent Diamond Electrodes",
+    "category": "Research",
+    "year": "2019 – 2022",
+    "summary": "The first electron-beam-transparent boron-doped diamond electrodes for combined electrochemistry and in situ transmission electron microscopy.",
+    "image": "/images/project-diamond-microscopy.webp",
+    "technologies": ["Boron-doped diamond", "In situ TEM", "STEM", "Electrode fabrication"],
+    "featured": true,
+    "sample": false,
+    "overview": "Combining electrochemistry with transmission electron microscopy requires electrodes that can operate in an electrochemical cell while remaining transparent to the electron beam. This work addressed that materials and fabrication challenge.",
+    "approach": "At the University of Warwick, the electrodes were fabricated from boron-doped diamond and investigated using advanced electron microscopy and complementary analytical techniques. The research connected electrode design with nanoscale measurements of electrochemical processes.",
+    "outcome": "The work produced the first electron-beam-transparent boron-doped diamond electrodes for in situ TEM and was published in ACS Measurement Science Au in 2022, with an associated supporting dataset."
+  },
+  {
+    "slug": "2d-materials-semiconductors",
+    "title": "2D Materials & Semiconductors",
+    "category": "Research",
+    "summary": "Microscopy-led examination of 2D materials and semiconductor structures, using colour-enhanced imaging to inspect surface morphology.",
+    "image": "/images/project-2d-semiconductors.webp",
+    "technologies": ["2D materials", "Semiconductors", "MoTe₂", "Microscopy"],
+    "featured": false,
+    "sample": false,
+    "overview": "Two-dimensional materials and semiconductors provide a platform for investigating nanoscale surfaces and interfaces. This project presents a microscopy view of MoTe₂, focusing on the surface structure visible in the supplied image.",
+    "approach": "Colour-enhanced microscopy highlights variations in surface morphology across the material. The image supports close inspection of texture, contrast, and structural features throughout the sample.",
+    "outcome": "The microscopy image provides a visual record of the MoTe₂ surface for further structural interpretation and comparison within 2D materials and semiconductor research."
+  },
+  {
+    "slug": "functional-materials-synthesis",
+    "title": "Functional Materials Synthesis",
+    "category": "Research",
+    "summary": "Synthesis and microscopy of functional materials, using colour-enhanced imaging to examine crystal morphology and surface features.",
+    "image": "/images/project-functional-materials-synthesis.webp",
+    "technologies": ["Functional materials", "Materials synthesis", "Crystal morphology", "Colour-enhanced microscopy"],
+    "featured": false,
+    "sample": false,
+    "overview": "Functional materials synthesis connects preparation methods with the structures and properties of the resulting materials. This project focuses on the crystal morphology visible in a synthesised material sample.",
+    "approach": "Colour-enhanced crystal imaging highlights facets, boundaries, and variations across the sample, making morphological features easier to inspect and compare.",
+    "outcome": "The resulting image provides a visual record of crystal morphology for subsequent materials characterisation and comparison."
+  },
+  {
+    "slug": "sodium-battery-scale-up",
+    "title": "Sodium Battery Technology Scale-Up",
+    "category": "Research",
+    "year": "2021 – 2022",
+    "summary": "Scale-up research on sodium batteries and nanometric dielectric protection layers with industrial partners SPTS/KLA and Enserv.",
+    "image": "/images/project-sodium-battery.webp",
+    "technologies": ["Sodium batteries", "Dielectric coatings", "Al₂O₃", "Industrial collaboration"],
+    "featured": false,
+    "sample": false,
+    "overview": "Dendrite formation is a key barrier to reliable sodium-metal battery operation. This Swansea University research focused on scalable technology and interfacial protection strategies.",
+    "approach": "Collaboration with SPTS/KLA and Enserv supported the development of nanometric dielectric protection layers, including aluminium oxide as an artificial interphase intended to suppress sodium dendrite formation.",
+    "outcome": "The programme connected laboratory-scale materials development with industrial process expertise and contributed to research on pressure optimisation for improved sodium plating on copper foil."
+  },
+  {
+    "slug": "high-throughput-chemistry",
+    "title": "High-Throughput Chemistry & Automation",
+    "category": "Digital Products",
+    "year": "2024 – Present",
+    "summary": "A programme helping chemistry students and researchers integrate automation and artificial intelligence into experimental workflows.",
+    "image": "/images/project-lab-automation.webp",
+    "technologies": ["Laboratory automation", "Artificial intelligence", "High-throughput chemistry", "Robotics"],
+    "featured": false,
+    "sample": false,
+    "overview": "Automation and high-throughput methods can make experimental chemistry more systematic and scalable. This programme connects researcher training with the development of automated electrochemical workflows.",
+    "approach": "The initiative combines teaching and research leadership with strategic partnerships involving robotics companies Fredebold Sondermaschinen GmbH and Cellerate. It draws on Python, data analysis, and experimental design to support automated chemistry.",
+    "outcome": "The programme is developing skills and infrastructure for automated, high-throughput experimentation alongside the wider sustainable electrochemistry research portfolio."
+  },
+  {
+    "slug": "research-budget-python-tool",
+    "title": "Research Budget Tracking with Python",
+    "category": "Data Science",
+    "year": "2024 – Present",
+    "summary": "A Python tool developed to support AXA grant budget management, procurement oversight, and quarterly financial reporting.",
+    "image": "/images/project-data.svg",
+    "technologies": ["Python", "Financial tracking", "Research administration", "Data analysis"],
+    "featured": false,
+    "sample": false,
+    "overview": "Independent research leadership requires accurate oversight of expenditure, procurement, and reporting alongside the scientific programme. A dedicated Python tracking tool supports those operational needs.",
+    "approach": "The tool is used alongside Worktribe and UniCore for managing the AXA grant budget. It complements purchase-order workflows, financial and procurement approvals, and quarterly reporting with pre- and post-award research funding teams and Finance.",
+    "outcome": "The tool supports day-to-day financial visibility and structured reporting for the AXA-funded research programme."
+  },
+  {
+    "slug": "materials-science-public-engagement",
+    "title": "Materials Science Public Engagement",
+    "category": "Community Projects",
+    "year": "2015 – 2016",
+    "summary": "Public-facing materials science through the Royal Society Summer Exhibition and the Science Museum’s ‘Science Late’ event in London.",
+    "image": "/images/project-public-engagement.webp",
+    "technologies": ["Public engagement", "Science communication", "Materials science", "Outreach"],
+    "featured": false,
+    "sample": false,
+    "overview": "Public engagement makes advanced materials research accessible beyond academic and industrial audiences. These activities presented materials science in interactive public settings in London.",
+    "approach": "At the Royal Society Summer Exhibition in July 2016, Haytham presented ‘Diamond: more than just a gemstone’. He also contributed to the Science Museum’s ‘Science Late’ event in April 2015.",
+    "outcome": "The Royal Society Summer Exhibition attracted more than 10,000 visitors, while the Science Museum event reached approximately 1,000 visitors, creating opportunities to discuss advanced materials with broad public audiences."
+  }
+]

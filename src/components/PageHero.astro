@@ -1,0 +1,26 @@
+---
+import { withBase } from '../utils/content';
+interface Props {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  breadcrumb?: string;
+}
+const { eyebrow, title, intro, breadcrumb } = Astro.props;
+---
+<section class="page-hero">
+  <div class="container">
+    {breadcrumb && (
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol><li><a href={withBase()}>Home</a></li><li aria-current="page">{breadcrumb}</li></ol>
+      </nav>
+    )}
+    <div class="page-hero-grid">
+      <div class="reveal">
+        <p class="eyebrow">{eyebrow}</p>
+        <h1>{title}</h1>
+      </div>
+      <div class="page-hero-intro reveal"><p>{intro}</p><slot /></div>
+    </div>
+  </div>
+</section>

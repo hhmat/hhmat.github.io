@@ -1,0 +1,99 @@
+---
+import { ArrowRight, ArrowUpRight, Database, MapPin, Microscope, Users } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import profile from '../data/profile.json';
+import projects from '../data/projects.json';
+import news from '../data/news.json';
+import { formatDate, withBase } from '../utils/content';
+
+const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
+const featuredPost = news.find((post) => post.featured) || news[0];
+---
+<BaseLayout title={profile.name} description="The academic portfolio of Haytham Hussein, AXA Research Fellow at the University of Nottingham — electrochemistry, advanced materials, microscopy, and sustainable technologies.">
+  <section class="home-hero">
+    <div class="container home-hero-grid">
+      <div class="reveal">
+        <p class="eyebrow">{profile.name} · {profile.role}</p>
+        <h1>Electrochemistry, materials &amp; <em>sustainable technologies.</em></h1>
+        <p class="hero-intro">{profile.introduction}</p>
+        <div class="button-row">
+          <a class="button" href={withBase('projects/')}>Explore selected work <ArrowRight size={18} aria-hidden="true" /></a>
+          <a class="button button-secondary" href={withBase('about/')}>Read my profile</a>
+        </div>
+        <div class="hero-meta">
+          <span><MapPin size={17} aria-hidden="true" /> Nottingham, United Kingdom</span>
+          <span>Electrochemistry · Materials · Microscopy</span>
+        </div>
+      </div>
+      <figure class="portrait-wrap reveal">
+        <img class="portrait" src={withBase('images/haytham-hussein-portrait.webp')} alt="Portrait of Haytham Hussein" width="800" height="1000" fetchpriority="high" />
+        <figcaption class="portrait-note">Haytham Hussein · AXA Research Fellow</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section-subtle" aria-labelledby="highlights-title">
+    <div class="container">
+      <div class="section-heading reveal">
+        <h2 id="highlights-title">From fundamental electrochemistry to practical technologies.</h2>
+        <p>Research spanning electrodeposition, energy storage, carbon dioxide conversion, and resource recovery, supported by advanced characterisation and public engagement.</p>
+      </div>
+      <div class="highlight-list">
+        <article class="highlight-item reveal">
+          <Microscope class="highlight-icon" size={25} stroke-width={1.5} aria-hidden="true" />
+          <h3>Materials and interfaces</h3>
+          <p>Investigating electrochemical deposition, battery materials, catalysts, and diamond electrodes to understand and control interfacial processes.</p>
+        </article>
+        <article class="highlight-item reveal">
+          <Database class="highlight-icon" size={25} stroke-width={1.5} aria-hidden="true" />
+          <h3>Evidence through characterisation</h3>
+          <p>Combining electrochemical measurements with electron microscopy, spectroscopy, diffraction, and data analysis to connect structure with performance.</p>
+        </article>
+        <article class="highlight-item reveal">
+          <Users class="highlight-icon" size={25} stroke-width={1.5} aria-hidden="true" />
+          <h3>Knowledge through exchange</h3>
+          <p>Sharing research through publications, conferences, teaching, supervision, public lectures, and hands-on materials-science outreach.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="selected-work-title">
+    <div class="container">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">Selected work</p><h2 id="selected-work-title">Research across energy, materials, and sustainability.</h2></div>
+        <div><p>Selected projects from academic research, technical development, and public engagement.</p><a class="text-link" href={withBase('projects/')}>View all projects <ArrowUpRight size={17} aria-hidden="true" /></a></div>
+      </div>
+      <div class="project-grid project-grid-home">
+        {featuredProjects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-subtle" aria-labelledby="latest-note-title">
+    <div class="container news-feature">
+      <div class="news-feature-art reveal"><img src={withBase('images/news-feature.svg')} alt="" width="800" height="600" loading="lazy" /></div>
+      <div class="news-feature-copy reveal">
+        <p class="eyebrow">Latest note · {featuredPost.displayDate || formatDate(featuredPost.date)}</p>
+        <h2 id="latest-note-title">{featuredPost.title}</h2>
+        <p>{featuredPost.excerpt}</p>
+        <a class="text-link" href={withBase(`news/${featuredPost.slug}/`)}>Read the featured article <ArrowUpRight size={17} aria-hidden="true" /></a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="quick-links reveal" aria-label="Quick links">
+        <a class="quick-link" href={withBase('publications/')}><span>Publications</span><ArrowUpRight size={22} aria-hidden="true" /></a>
+        <a class="quick-link" href={withBase('news/')}><span>News &amp; notes</span><ArrowUpRight size={22} aria-hidden="true" /></a>
+        <a class="quick-link" href={withBase('gallery/')}><span>Gallery</span><ArrowUpRight size={22} aria-hidden="true" /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-inverse">
+    <div class="container cta-band reveal">
+      <h2>Let’s connect electrochemistry, materials, and sustainable innovation.</h2>
+      <div><p>For research collaborations, academic enquiries, or scientific exchange, please get in touch.</p><a class="button button-inverse" href={withBase('contact/')}>Start a conversation <ArrowRight size={18} aria-hidden="true" /></a></div>
+    </div>
+  </section>
+</BaseLayout>

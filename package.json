@@ -1,0 +1,26 @@
+{
+  "name": "haytham-hussein-academic-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A static-first academic and professional portfolio for Haytham Hussein.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "test:ui": "playwright test"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/ibm-plex-sans": "^5.3.0",
+    "@fontsource-variable/newsreader": "^5.3.0",
+    "@lucide/astro": "^1.70.0",
+    "astro": "^7.4.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.5",
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.56.1",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,64 @@
+---
+import { Expand, Search, X } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import gallery from '../data/gallery.json';
+import { unique, withBase } from '../utils/content';
+const categories = unique(gallery.map((item) => item.category));
+---
+<BaseLayout title="Gallery" description="A responsive gallery for conferences, research activities, invited talks, and public engagement by Haytham Hussein.">
+  <PageHero eyebrow="Gallery" title="Work beyond the written record." intro="A visual record of conferences, scientific exchange, research milestones, and public-facing activities." breadcrumb="Gallery" />
+  <section class="section" data-filter-root>
+    <div class="container">
+      <div class="filter-panel" aria-label="Gallery filters">
+        <div class="search-field"><Search size={19} aria-hidden="true" /><input type="search" data-filter-search placeholder="Search gallery…" aria-label="Search gallery" /></div>
+        <div class="filter-group" aria-label="Filter gallery by category">
+          <button class="filter-button" type="button" data-filter="All" aria-pressed="true">All images</button>
+          {categories.map((category) => <button class="filter-button" type="button" data-filter={category} aria-pressed="false">{category}</button>)}
+        </div>
+      </div>
+      <p class="result-count" data-result-count role="status" aria-live="polite"></p>
+      <div class="gallery-grid">
+        {gallery.map((item) => (
+          <figure class="gallery-item reveal" data-filter-item data-category={item.category} data-search={`${item.title} ${item.category} ${item.caption}`.toLowerCase()}>
+            <button class="gallery-trigger" type="button" data-gallery-open data-title={item.title} data-image={withBase(item.image)} data-alt={item.alt} data-caption={item.caption} aria-label={`Enlarge ${item.title} image`}>
+              <img src={withBase(item.image)} alt={item.alt} width="800" height="600" loading="lazy" />
+            </button>
+            <figcaption class="gallery-caption"><h2>{item.title} <Expand size={15} aria-hidden="true" style="display:inline" /></h2><p>{item.category}{item.sample ? ' · Placeholder' : ''}</p></figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="empty-state filter-empty" data-filter-empty><h3>No matching images</h3><p>Try another keyword or select “All images” to reset the category filter.</p></div>
+    </div>
+  </section>
+  <dialog class="lightbox" id="gallery-lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-inner">
+      <button class="icon-button lightbox-close" id="lightbox-close" type="button" aria-label="Close image viewer"><X size={22} aria-hidden="true" /></button>
+      <img id="lightbox-image" src={withBase(gallery[0].image)} alt="" width="1000" height="750" />
+      <div class="lightbox-caption"><h2 id="lightbox-title"></h2><p id="lightbox-description"></p></div>
+    </div>
+  </dialog>
+</BaseLayout>
+<script>
+  import { initFilters } from '../scripts/filters';
+  initFilters();
+  const dialog = document.querySelector<HTMLDialogElement>('#gallery-lightbox');
+  const image = document.querySelector<HTMLImageElement>('#lightbox-image');
+  const title = document.querySelector<HTMLHeadingElement>('#lightbox-title');
+  const description = document.querySelector<HTMLParagraphElement>('#lightbox-description');
+  const close = document.querySelector<HTMLButtonElement>('#lightbox-close');
+  let activeTrigger: HTMLButtonElement | null = null;
+  document.querySelectorAll<HTMLButtonElement>('[data-gallery-open]').forEach((button) => {
+    button.addEventListener('click', () => {
+      activeTrigger = button;
+      if (image) { image.src = button.dataset.image || ''; image.alt = button.dataset.alt || ''; }
+      if (title) title.textContent = button.dataset.title || '';
+      if (description) description.textContent = button.dataset.caption || '';
+      dialog?.showModal();
+      close?.focus();
+    });
+  });
+  close?.addEventListener('click', () => dialog?.close());
+  dialog?.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+  dialog?.addEventListener('close', () => activeTrigger?.focus());
+</script>

@@ -1,0 +1,93 @@
+---
+import { Menu, Moon, Search, Sun, X } from '@lucide/astro';
+import profile from '../data/profile.json';
+import { withBase } from '../utils/content';
+
+const navigation = [
+  { label: 'Home', href: withBase() },
+  { label: 'About', href: withBase('about/') },
+  { label: 'Projects', href: withBase('projects/') },
+  { label: 'Publications', href: withBase('publications/') },
+  { label: 'News', href: withBase('news/') },
+  { label: 'Gallery', href: withBase('gallery/') },
+  { label: 'Contact', href: withBase('contact/') },
+];
+const currentPath = Astro.url.pathname;
+const isCurrent = (href: string) => href === withBase() ? currentPath === href : currentPath.startsWith(href);
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={withBase()} title="Home">
+      <span class="brand-mark" aria-hidden="true">HH</span>
+      <span class="brand-copy">
+        <span class="brand-name">{profile.name}</span>
+        <span class="brand-role">{profile.role} · Nottingham</span>
+      </span>
+    </a>
+
+    <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation" data-open="false">
+      <ul class="nav-list">
+        {navigation.map((item) => (
+          <li><a class="nav-link" href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" type="button" data-search-open aria-label="Search this website" title="Search (Ctrl or Command + K)">
+        <Search size={19} stroke-width={1.8} aria-hidden="true" />
+      </button>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Change colour theme">
+        <Moon class="theme-icon-moon" size={19} stroke-width={1.8} aria-hidden="true" />
+        <Sun class="theme-icon-sun" size={19} stroke-width={1.8} aria-hidden="true" />
+      </button>
+      <button class="icon-button nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">
+        <Menu class="menu-open-icon" size={22} stroke-width={1.8} aria-hidden="true" />
+        <X class="menu-close-icon" size={22} stroke-width={1.8} aria-hidden="true" style="display:none" />
+      </button>
+    </div>
+  </div>
+</header>
+
+<script>
+  const navToggle = document.querySelector<HTMLButtonElement>('#nav-toggle');
+  const navigation = document.querySelector<HTMLElement>('#primary-navigation');
+  const openIcon = navToggle?.querySelector<SVGElement>('.menu-open-icon');
+  const closeIcon = navToggle?.querySelector<SVGElement>('.menu-close-icon');
+
+  const setNavigation = (open: boolean) => {
+    if (!navToggle || !navigation) return;
+    navigation.dataset.open = String(open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    if (openIcon) openIcon.style.display = open ? 'none' : 'block';
+    if (closeIcon) closeIcon.style.display = open ? 'block' : 'none';
+  };
+
+  navToggle?.addEventListener('click', () => setNavigation(navigation?.dataset.open !== 'true'));
+  navigation?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setNavigation(false)));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navigation?.dataset.open === 'true') {
+      setNavigation(false);
+      navToggle?.focus();
+    }
+  });
+  document.addEventListener('click', (event) => {
+    if (navigation?.dataset.open === 'true' && !event.composedPath().includes(navigation) && !event.composedPath().includes(navToggle!)) {
+      setNavigation(false);
+    }
+  });
+
+  const themeToggle = document.querySelector<HTMLButtonElement>('#theme-toggle');
+  const updateThemeLabel = () => {
+    const dark = document.documentElement.dataset.theme === 'dark';
+    themeToggle?.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  };
+  updateThemeLabel();
+  themeToggle?.addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('haytham-theme', next); } catch { /* Storage can be unavailable in private browsing. */ }
+    updateThemeLabel();
+  });
+</script>
