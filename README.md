@@ -146,7 +146,7 @@ Article `body` is an array of paragraphs. Gallery items support Conferences, Eve
 Copy `.env.example` to `.env` when testing deployment paths locally:
 
 ```dotenv
-SITE_URL=https://hhmat.github.io
+SITE_URL=https://haythamhussein.is-a.dev
 BASE_PATH=/
 ```
 

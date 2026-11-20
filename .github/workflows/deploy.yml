@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SITE_URL: ${{ vars.SITE_URL || 'https://hhmat.github.io' }}
+      SITE_URL: ${{ vars.SITE_URL || 'https://haythamhussein.is-a.dev' }}
       BASE_PATH: ${{ vars.BASE_PATH || '/' }}
     steps:
       - name: Checkout
