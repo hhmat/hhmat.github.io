@@ -1,5 +1,17 @@
 [
   {
+    "slug": "competing-surface-dynamics-copper-co2",
+    "title": "Competing Surface Dynamics of Copper Catalyst Particles during Electrochemical Carbon Dioxide Reduction",
+    "type": "Journal articles",
+    "year": "2026",
+    "authors": "Y. Chen, T. Burwell, M. Thangamuthu, S. Ghaderzadeh, G. N. Aliev, H. E. M. Hussein, et al.",
+    "venue": "ACS Nano, advance online publication",
+    "citation": "Chen, Y., Burwell, T., Thangamuthu, M., Ghaderzadeh, S., Aliev, G. N., Hussein, H. E. M., et al. (2026). Competing surface dynamics of copper catalyst particles during electrochemical carbon dioxide reduction. ACS Nano. Advance online publication. https://doi.org/10.1021/acsnano.6c11607",
+    "summary": "Atomic-scale, identical-location electron microscopy reveals competing restructuring pathways in copper catalyst nanoparticles during electrochemical carbon dioxide reduction.",
+    "url": "https://doi.org/10.1021/acsnano.6c11607",
+    "sample": false
+  },
+  {
     "slug": "electrochemical-conversion-co2-plasmas-2026",
     "title": "Electrochemical conversion of CO₂ plasmas",
     "type": "Journal articles",
@@ -32,18 +44,6 @@
     "venue": "Advanced Materials Technologies, 202500168",
     "citation": "Jaafar, A. H., Hussein, H., Zhang, T., Zhelev, N., et al. (2025). Integrated Ovonic Threshold Switching Selector and Resistive Switching Memory 1S1R in Electrodeposited ZnTe Thin Films. Advanced Materials Technologies, 202500168.",
     "summary": "Research on electrodeposited zinc telluride thin films for integrated selector and resistive switching memory devices.",
-    "url": "",
-    "sample": false
-  },
-  {
-    "slug": "competing-surface-dynamics-copper-co2",
-    "title": "Competing On-Surface Dynamics of Copper Catalyst Particles During Electrochemical CO₂ Reduction",
-    "type": "Preprints",
-    "year": "2025",
-    "authors": "Y. Chen, T. Burwell, M. Thangamuthu, S. Ghaderzadeh, G. Aliev, H. Hussein, et al.",
-    "venue": "ChemRxiv, 2025 (1201)",
-    "citation": "Chen, Y., Burwell, T., Thangamuthu, M., Ghaderzadeh, S., Aliev, G., Hussein, H., et al. (2025). Competing On-Surface Dynamics of Copper Catalyst Particles During Electrochemical CO₂ Reduction. ChemRxiv.",
-    "summary": "A preprint investigating nanoscale dynamics of copper catalyst particles during electrochemical carbon dioxide reduction.",
     "url": "",
     "sample": false
   },
