@@ -1,5 +1,22 @@
 [
   {
+    "slug": "acs-nano-copper-catalyst-dynamics",
+    "title": "Copper catalyst dynamics research published in ACS Nano",
+    "excerpt": "A new ACS Nano article reveals the competing atomic-scale restructuring processes that shape copper catalyst stability during electrochemical carbon dioxide reduction.",
+    "date": "2026-11-12",
+    "displayDate": "November 2026",
+    "category": "Publications",
+    "tags": ["ACS Nano", "CO₂ reduction", "Electron microscopy"],
+    "featured": true,
+    "sample": false,
+    "url": "https://doi.org/10.1021/acsnano.6c11607",
+    "body": [
+      "The article ‘Competing Surface Dynamics of Copper Catalyst Particles during Electrochemical Carbon Dioxide Reduction’ has been published as an advance online article in ACS Nano.",
+      "The research combines graphitized carbon nanofibers with identical-location transmission electron microscopy to follow individual copper nanoparticles during electrochemical carbon dioxide reduction. It reveals competing processes including Ostwald ripening, coalescence, selective etching, and fragmentation.",
+      "These observations provide an atomic-scale framework for understanding copper catalyst stability and developing strategies to improve the performance of carbon dioxide conversion technologies. Full publication details are available in the publications section."
+    ]
+  },
+  {
     "slug": "electrochemical-co2-plasmas-publication",
     "title": "Electrochemical conversion of CO₂ plasmas published",
     "excerpt": "The Sustainable Energy & Fuels article and an associated Zenodo dataset document research into plasma-based electrochemical carbon dioxide conversion.",
@@ -7,7 +24,7 @@
     "displayDate": "2026",
     "category": "Publications",
     "tags": ["CO₂ conversion", "Plasma", "Electrochemistry"],
-    "featured": true,
+    "featured": false,
     "sample": false,
     "body": [
       "The article ‘Electrochemical conversion of CO₂ plasmas’ has been published in Sustainable Energy & Fuels, volume 10, issue 9, pages 2327–2343, with an associated dataset available through Zenodo.",
