@@ -10,6 +10,10 @@
     "featured": true,
     "sample": false,
     "url": "https://doi.org/10.1021/acsnano.6c11607",
+    "image": "/images/news/acs-nano-copper-graphical-abstract.png",
+    "imageAlt": "Diagram of copper nanoparticles on graphitised carbon undergoing Ostwald ripening, coalescence and Coulomb explosion during carbon dioxide reduction.",
+    "imageCredit": "Graphical abstract from the authors’ ChemRxiv preprint, shared under CC BY 4.0.",
+    "imageCreditUrl": "https://doi.org/10.26434/chemrxiv-2025-pthh7",
     "body": [
       "The article ‘Competing Surface Dynamics of Copper Catalyst Particles during Electrochemical Carbon Dioxide Reduction’ has been published as an advance online article in ACS Nano.",
       "The research combines graphitized carbon nanofibers with identical-location transmission electron microscopy to follow individual copper nanoparticles during electrochemical carbon dioxide reduction. It reveals competing processes including Ostwald ripening, coalescence, selective etching, and fragmentation.",
