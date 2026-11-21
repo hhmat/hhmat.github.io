@@ -387,6 +387,7 @@ p { max-width: 70ch; }
 .gallery-item { margin: 0; }
 .gallery-trigger { display: block; width: 100%; padding: 0; border: 0; background: var(--surface-subtle); text-align: left; }
 .gallery-trigger img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 240ms ease-out, opacity 180ms ease-out; }
+.gallery-trigger-contain img { object-fit: contain; background: var(--surface-raised); }
 .gallery-trigger:hover img { transform: scale(0.985); opacity: 0.88; }
 .gallery-caption { padding-block: 0.85rem 1.5rem; }
 .gallery-caption h2 { margin-bottom: 0.25rem; font-family: var(--font-sans); font-size: 1rem; font-weight: 620; letter-spacing: 0; }

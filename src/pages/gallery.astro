@@ -21,7 +21,7 @@ const categories = unique(gallery.map((item) => item.category));
       <div class="gallery-grid">
         {gallery.map((item) => (
           <figure class="gallery-item reveal" data-filter-item data-category={item.category} data-search={`${item.title} ${item.category} ${item.caption}`.toLowerCase()}>
-            <button class="gallery-trigger" type="button" data-gallery-open data-title={item.title} data-image={withBase(item.image)} data-alt={item.alt} data-caption={item.caption} aria-label={`Enlarge ${item.title} image`}>
+            <button class:list={["gallery-trigger", item.fit === "contain" && "gallery-trigger-contain"]} type="button" data-gallery-open data-title={item.title} data-image={withBase(item.image)} data-alt={item.alt} data-caption={item.caption} aria-label={`Enlarge ${item.title} image`}>
               <img src={withBase(item.image)} alt={item.alt} width="800" height="600" loading="lazy" />
             </button>
             <figcaption class="gallery-caption"><h2>{item.title} <Expand size={15} aria-hidden="true" style="display:inline" /></h2><p>{item.category}{item.sample ? ' · Placeholder' : ''}</p></figcaption>

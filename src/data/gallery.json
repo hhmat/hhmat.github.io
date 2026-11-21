@@ -1,5 +1,15 @@
 [
   {
+    "id": "copper-catalyst-surface-dynamics",
+    "title": "Copper catalyst surface dynamics",
+    "category": "Publications",
+    "image": "/images/news/acs-nano-copper-graphical-abstract.png",
+    "alt": "Diagram of copper nanoparticles on graphitised carbon undergoing Ostwald ripening, coalescence and Coulomb explosion during carbon dioxide reduction",
+    "caption": "Competing surface phenomena in copper catalysts during electrochemical carbon dioxide reduction. Graphical abstract from the authors’ ChemRxiv preprint, doi:10.26434/chemrxiv-2025-pthh7, shared under CC BY 4.0.",
+    "fit": "contain",
+    "sample": false
+  },
+  {
     "id": "professional-gatherings",
     "title": "Professional gatherings",
     "category": "Events",
